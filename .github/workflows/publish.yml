@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Github Packages & Bintray
 on:
   push:
     tags:
@@ -22,8 +22,13 @@ jobs:
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
-      - name: Publish
+      - name: Publish Github Packages
         env:
           USERNAME: irgaly
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew publish
+      - name: Publish Bintray
+        env:
+          BINTRAY_USER: irgaly
+          BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
+        run: ./gradlew bintrayUpload

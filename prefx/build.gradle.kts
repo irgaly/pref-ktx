@@ -1,6 +1,9 @@
+import com.jfrog.bintray.gradle.BintrayExtension.PackageConfig
+
 plugins {
     id("com.android.library")
     kotlin("android")
+    id(Dependencies.Bintray.plugin)
     `maven-publish`
 }
 
@@ -17,6 +20,19 @@ val androidSourcesJar by tasks.creating(Jar::class) {
     from(android.sourceSets["main"].java.srcDirs)
 }
 
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_API_KEY")
+    setPublications("maven")
+    publish = true
+    pkg(delegateClosureOf<PackageConfig> {
+        userOrg = "kapybara"
+        repo = "maven"
+        name = "prefx"
+        version.name = Versions.versionName
+    })
+}
+
 afterEvaluate {
     publishing {
         publications {
@@ -29,4 +45,10 @@ afterEvaluate {
             }
         }
     }
+    val bintrayUpload by tasks.existing {
+        dependsOn(androidSourcesJar)
+        dependsOn(tasks.named("generatePomFileForMavenPublication"))
+        dependsOn(tasks.named("generateMetadataFileForMavenPublication"))
+    }
+
 }

@@ -95,6 +95,12 @@ object Dependencies {
         val ktx = "com.squareup.moshi:moshi-kotlin:$version"
     }
 
+    object Bintray {
+        val version = "1.8.5"
+        val classpath = "com.jfrog.bintray.gradle:gradle-bintray-plugin:$version"
+        val plugin = "com.jfrog.bintray"
+    }
+
     object Remal {
         val version = "1.0.208"
         val classpath = "name.remal:gradle-plugins:$version"
