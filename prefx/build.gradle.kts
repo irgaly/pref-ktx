@@ -8,5 +8,5 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.stdlibJdk8)
+    implementation(Dependencies.Kotlin.stdlib)
 }
