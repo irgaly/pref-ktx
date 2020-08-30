@@ -5,4 +5,3 @@ object Versions {
     const val androidTargetSdkVersion = 30
     const val androidMinSdkVersion = 16
 }
-

@@ -91,6 +91,11 @@ object Dependencies {
         val ktx = "com.squareup.moshi:moshi-kotlin:$version"
     }
 
+    object PrefKtx {
+        val version = "1.0.0"
+        val ktx = "net.irgaly:pref-ktx:$version"
+    }
+
     object Bintray {
         val version = "1.8.5"
         val classpath = "com.jfrog.bintray.gradle:gradle-bintray-plugin:$version"
