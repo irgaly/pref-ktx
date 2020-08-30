@@ -1,4 +1,5 @@
 @file:Suppress("unused")
+
 package src.net.irgaly.pref
 
 import android.content.SharedPreferences
