@@ -13,6 +13,7 @@ android {
 }
 
 dependencies {
+    implementation(Dependencies.AndroidX.appCompat)
     //implementation(project(":pref-ktx"))
     implementation(Dependencies.PrefKtx.ktx)
 }
