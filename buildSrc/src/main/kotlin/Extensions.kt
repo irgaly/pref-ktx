@@ -38,6 +38,9 @@ fun BaseExtension.applyCommon(project: Project, resourcePrefix: String? = null) 
         }
     }
     if (this is LibraryExtension) {
+        libraryVariants.all {
+            generateBuildConfigProvider.get().enabled = false
+        }
         sourceSets.configureEach {
             setRoot("src/android/$name")
             java.srcDirs("src/android/$name/kotlin")
