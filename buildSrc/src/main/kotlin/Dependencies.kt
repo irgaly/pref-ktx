@@ -40,7 +40,7 @@ object Dependencies {
     }
 
     object AndroidX {
-        val appCompat = "androidx.appcompat:appcompat:1.1.0"
+        val appCompat = "androidx.appcompat:appcompat:1.2.0"
         val recyclerView = "androidx.recyclerview:recyclerview:1.0.0"
         val viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
         val pagingKtx = "androidx.paging:paging-runtime-ktx:2.1.2"
@@ -103,7 +103,7 @@ object Dependencies {
     }
 
     object Remal {
-        val version = "1.0.208"
+        val version = "1.0.211"
         val classpath = "name.remal:gradle-plugins:$version"
         val checkUpdatesPlugin = "name.remal.check-updates"
     }
