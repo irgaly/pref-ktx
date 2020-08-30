@@ -1,6 +1,5 @@
 @file:Suppress("unused")
-
-package src.net.irgaly.prefx
+package src.net.irgaly.pref
 
 import android.content.SharedPreferences
 import kotlin.properties.ReadWriteProperty

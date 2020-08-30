@@ -1,2 +1,2 @@
-rootProject.name = "prefx"
-include(":prefx")
+rootProject.name = "pref-ktx"
+include(":pref-ktx")

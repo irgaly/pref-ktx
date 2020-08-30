@@ -1,3 +1,3 @@
 object Packages {
-    const val name = "net.irgaly.prefx"
+    const val name = "net.irgaly.pref"
 }

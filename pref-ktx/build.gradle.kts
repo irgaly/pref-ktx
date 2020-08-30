@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    applyCommon(project, "prefx")
+    applyCommon(project, "prefktx")
 }
 
 dependencies {
@@ -26,9 +26,9 @@ bintray {
     setPublications("maven")
     publish = true
     pkg(delegateClosureOf<PackageConfig> {
-        userOrg = "kapybara"
+        userOrg = "irgaly"
         repo = "maven"
-        name = "prefx"
+        name = "pref-ktx"
         version.name = Versions.versionName
     })
 }
@@ -40,7 +40,7 @@ afterEvaluate {
                 from(components["release"])
                 artifact(androidSourcesJar)
                 groupId = "net.irgaly"
-                artifactId = "prefx"
+                artifactId = "pref-ktx"
                 version = Versions.versionName
             }
         }
