@@ -3,7 +3,7 @@ import org.gradle.api.internal.artifacts.dependencies.DefaultExternalModuleDepen
 @Suppress("unused", "MayBeConstant", "MemberVisibilityCanBePrivate")
 object Dependencies {
     object Kotlin {
-        val version = "1.3.72"
+        val version = "1.4.0"
         val classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         val stdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-common:$version"
         val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$version"
@@ -12,7 +12,7 @@ object Dependencies {
         val test = "org.jetbrains.kotlin:kotlin-test:$version"
 
         object Coroutines {
-            val version = "1.3.5"
+            val version = "1.3.9"
             val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
             val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
             val rx = "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$version"
@@ -25,10 +25,9 @@ object Dependencies {
 
             object Serialization {
                 val plugin = "kotlinx-serialization"
-                val version = "0.20.0"
+                val version = "1.0.0-RC"
                 val classpath = "org.jetbrains.kotlin:kotlin-serialization:${Kotlin.version}"
-                val common = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$version"
-                val jvm = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
+                val core = "org.jetbrains.kotlinx:kotlinx-serialization-core:$version"
             }
 
             object Io {
@@ -40,7 +39,7 @@ object Dependencies {
     }
 
     object Android {
-        val classpath = "com.android.tools.build:gradle:4.2.0-alpha05"
+        val classpath = "com.android.tools.build:gradle:4.2.0-alpha08"
     }
 
     object AndroidX {
