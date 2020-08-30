@@ -1,4 +1,3 @@
-import com.android.build.gradle.AppExtension
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.JavaVersion
@@ -32,14 +31,18 @@ fun BaseExtension.applyCommon(project: Project, resourcePrefix: String? = null) 
         lintConfig = project.file("${project.rootDir}/lint/lint.xml")
         isAbortOnError = false
     }
-    if (this is AppExtension) {
+    if (this is com.android.build.gradle.internal.dsl.BaseAppModuleExtension) {
+        buildFeatures {
+            dataBinding = true
+        }
         sourceSets.configureEach {
             java.srcDirs("src/$name/kotlin")
         }
     }
     if (this is LibraryExtension) {
-        libraryVariants.all {
-            generateBuildConfigProvider.get().enabled = false
+        buildFeatures {
+            dataBinding = true
+            buildConfig = false
         }
         sourceSets.configureEach {
             setRoot("src/android/$name")
