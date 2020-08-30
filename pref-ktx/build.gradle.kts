@@ -12,7 +12,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.stdlib)
 }
 
 val androidSourcesJar by tasks.creating(Jar::class) {
