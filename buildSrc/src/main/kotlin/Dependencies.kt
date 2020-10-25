@@ -26,9 +26,9 @@ object Dependencies {
 
             object Serialization {
                 val plugin = "kotlinx-serialization"
-                val version = "1.0.0-RC"
+                val version = "1.0.0"
                 val classpath = "org.jetbrains.kotlin:kotlin-serialization:${Kotlin.version}"
-                val core = "org.jetbrains.kotlinx:kotlinx-serialization-core:$version"
+                val json = "org.jetbrains.kotlinx:kotlinx-serialization-json:$version"
             }
 
             object Io {

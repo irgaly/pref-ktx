@@ -12,6 +12,7 @@ android {
 }
 
 dependencies {
+    implementation(Dependencies.Kotlin.KotlinX.Serialization.json)
     implementation(project(":pref-ktx-core"))
 }
 
@@ -28,7 +29,7 @@ bintray {
     pkg(delegateClosureOf<PackageConfig> {
         userOrg = "irgaly"
         repo = "maven"
-        name = "pref-ktx"
+        name = "pref-ktx-serialization"
         version.name = Versions.versionName
     })
 }
@@ -40,7 +41,7 @@ afterEvaluate {
                 from(components["release"])
                 artifact(androidSourcesJar)
                 groupId = "net.irgaly"
-                artifactId = "pref-ktx"
+                artifactId = "pref-ktx-serialization"
                 version = Versions.versionName
             }
         }
