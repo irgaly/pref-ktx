@@ -92,8 +92,9 @@ object Dependencies {
     }
 
     object PrefKtx {
-        val version = "1.0.0"
+        val version = "1.1.0"
         val ktx = "net.irgaly:pref-ktx:$version"
+        val serialization = "net.irgaly:pref-ktx-serialization:$version"
     }
 
     object Bintray {
