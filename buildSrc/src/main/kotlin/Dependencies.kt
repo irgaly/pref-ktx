@@ -7,7 +7,7 @@ object Dependencies {
     }
 
     object Kotlin {
-        val version = "1.4.0"
+        val version = "1.4.10"
         val classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         val reflect = "org.jetbrains.kotlin:kotlin-reflect:$version"
         val test = "org.jetbrains.kotlin:kotlin-test:$version"
