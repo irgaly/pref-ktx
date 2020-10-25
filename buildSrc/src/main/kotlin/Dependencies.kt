@@ -2,6 +2,10 @@ import org.gradle.api.internal.artifacts.dependencies.DefaultExternalModuleDepen
 
 @Suppress("unused", "MayBeConstant", "MemberVisibilityCanBePrivate")
 object Dependencies {
+    object Android {
+        val classpath = "com.android.tools.build:gradle:4.2.0-alpha14"
+    }
+
     object Kotlin {
         val version = "1.4.0"
         val classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
@@ -33,10 +37,6 @@ object Dependencies {
                 val jvm = "org.jetbrains.kotlinx:kotlinx-io-jvm:$version"
             }
         }
-    }
-
-    object Android {
-        val classpath = "com.android.tools.build:gradle:4.2.0-alpha08"
     }
 
     object AndroidX {
