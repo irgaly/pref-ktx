@@ -3,7 +3,7 @@ import org.gradle.api.internal.artifacts.dependencies.DefaultExternalModuleDepen
 @Suppress("unused", "MayBeConstant", "MemberVisibilityCanBePrivate")
 object Dependencies {
     object Android {
-        val classpath = "com.android.tools.build:gradle:4.2.0-alpha14"
+        val classpath = "com.android.tools.build:gradle:4.2.0-alpha15"
     }
 
     object Kotlin {
