@@ -2,7 +2,7 @@
 
 Android Shared Preferences Kotlin Extension
 
-(Blog Post - Kotlin らしく SharedPreferences をシンプルに扱う Extension を実装する)[https://qiita.com/irgaly/items/4b149068b2f62289e7a5]
+[Blog Post - Kotlin らしく SharedPreferences をシンプルに扱う Extension を実装する](https://qiita.com/irgaly/items/4b149068b2f62289e7a5)
 
 # Usage
 
