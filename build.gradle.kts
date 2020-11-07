@@ -10,6 +10,7 @@ buildscript {
     dependencies {
         classpath(Dependencies.Android.classpath)
         classpath(Dependencies.Kotlin.classpath)
+        classpath(Dependencies.Kotlin.KotlinX.Serialization.classpath)
         classpath(Dependencies.Bintray.classpath)
         classpath(Dependencies.Remal.classpath)
     }

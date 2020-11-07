@@ -14,6 +14,7 @@ android {
 dependencies {
     implementation(Dependencies.Kotlin.KotlinX.Serialization.json)
     implementation(project(":pref-ktx-core"))
+    api(project(":pref-ktx"))
 }
 
 val androidSourcesJar by tasks.creating(Jar::class) {

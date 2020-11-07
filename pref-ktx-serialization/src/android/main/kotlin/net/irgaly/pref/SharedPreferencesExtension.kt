@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package src.net.irgaly.pref
+package net.irgaly.pref
 
 import android.content.SharedPreferences
 import kotlinx.serialization.KSerializer
