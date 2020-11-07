@@ -8,7 +8,7 @@ Android Shared Preferences Kotlin Extension
 
 ## Gradle
 
-Using extension with JSON KotlinX Serialization.
+Using extension with JSON KotlinX Serialization. This also includes pref-ktx features.
 
 ```gradle
 dependencies {
