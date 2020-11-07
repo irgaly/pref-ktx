@@ -10,17 +10,17 @@ Android Shared Preferences Kotlin Extension
 
 Using extension with JSON KotlinX Serialization.
 
-```
+```gradle
 dependencies {
-    implementation("net.irgaly:pref-ktx-serialization:1.1.2")
+    implementation "net.irgaly:pref-ktx-serialization:1.1.2"
 }
 ```
 
 Using extension only with primitive types, if you would not to use JSON Serialization.
 
-```
+```gradle
 dependencies {
-    implementation("net.irgaly:pref-ktx:1.1.2")
+    implementation "net.irgaly:pref-ktx:1.1.2"
 }
 ```
 
@@ -29,7 +29,7 @@ dependencies {
 
 `pref-ktx` features
 
-```
+```kotlin
 class FooConfiguration (private val preferences: SharedPreferences)  {
     // Get key existence
     val containsFoo: Boolean get() = preferences.contains(::foo.name)
@@ -48,7 +48,7 @@ class FooConfiguration (private val preferences: SharedPreferences)  {
 
 `pref-ktx-serialization` features
 
-```
+```kotlin
 class FooConfiguration (private val preferences: SharedPreferences, json: Json)  {
     // Read/Write Person entity with KotlinX Serialization. Default value is "Person()".
     var person: Person by preferences.json(json, lazy { Person() })
