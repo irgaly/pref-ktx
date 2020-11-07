@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    applyCommon(project, "pref-ktx")
+    applyCommon(project, "pref-ktx", false)
 }
 
 dependencies {

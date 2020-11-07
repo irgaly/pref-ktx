@@ -12,7 +12,7 @@ Using extension with JSON KotlinX Serialization.
 
 ```gradle
 dependencies {
-    implementation("net.irgaly:pref-ktx-serialization:1.1.2")
+    implementation("net.irgaly:pref-ktx-serialization:1.1.3")
 }
 ```
 
@@ -20,7 +20,7 @@ Using extension only with primitive types, if you would not to use JSON Serializ
 
 ```gradle
 dependencies {
-    implementation("net.irgaly:pref-ktx:1.1.2")
+    implementation("net.irgaly:pref-ktx:1.1.3")
 }
 ```
 

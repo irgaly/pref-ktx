@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    applyCommon(project, "prefktx")
+    applyCommon(project, "prefktx", false)
 }
 
 dependencies {

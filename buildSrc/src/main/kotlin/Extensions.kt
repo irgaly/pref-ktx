@@ -13,7 +13,11 @@ fun Project.applyCommon(extension: BaseExtension, resourcePrefix: String? = null
 /**
  * android build 共通設定を適用する
  */
-fun BaseExtension.applyCommon(project: Project, resourcePrefix: String? = null) {
+fun BaseExtension.applyCommon(
+    project: Project,
+    resourcePrefix: String? = null,
+    dataBinding: Boolean = true
+) {
     resourcePrefix?.let {
         resourcePrefix("${it}_")
     }
@@ -33,7 +37,7 @@ fun BaseExtension.applyCommon(project: Project, resourcePrefix: String? = null) 
     }
     if (this is com.android.build.gradle.internal.dsl.BaseAppModuleExtension) {
         buildFeatures {
-            dataBinding = true
+            this.dataBinding = dataBinding
         }
         sourceSets.configureEach {
             java.srcDirs("src/$name/kotlin")
@@ -41,7 +45,7 @@ fun BaseExtension.applyCommon(project: Project, resourcePrefix: String? = null) 
     }
     if (this is LibraryExtension) {
         buildFeatures {
-            dataBinding = true
+            this.dataBinding = dataBinding
             buildConfig = false
         }
         sourceSets.configureEach {

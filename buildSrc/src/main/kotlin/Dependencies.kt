@@ -92,7 +92,7 @@ object Dependencies {
     }
 
     object PrefKtx {
-        val version = "1.1.2"
+        val version = "1.1.3"
         val ktx = "net.irgaly:pref-ktx:$version"
         val serialization = "net.irgaly:pref-ktx-serialization:$version"
     }
